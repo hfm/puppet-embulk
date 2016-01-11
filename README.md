@@ -48,6 +48,11 @@ class { '::embulk':
 Limitations
 ---
 
+Tested on:
+
+- CentOS 5.11
+- CentOS 6.6
+- CentOS 7.2.1511
 
 ## Development
 
