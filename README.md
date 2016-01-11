@@ -4,7 +4,7 @@
 
 #### Table of Contents
 
-1. [Description](#description)
+1. [Overview](#overview)
 1. [Setup - The basics of getting started with embulk](#setup)
     * [What embulk affects](#what-embulk-affects)
     * [Setup requirements](#setup-requirements)
@@ -14,16 +14,10 @@
 1. [Limitations - OS compatibility, etc.](#limitations)
 1. [Development - Guide for contributing to the module](#development)
 
-## Description
+Overview
+---
 
-Start with a one- or two-sentence summary of what the module does and/or what
-problem it solves. This is your 30-second elevator pitch for your module.
-Consider including OS/Puppet version it works with.
-
-You can give more descriptive information in a second paragraph. This paragraph
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?" If your module has a range of functionality (installation, configuration,
-management, etc.), this is the time to mention it.
+Manage installation of [embulk/embulk](https://github.com/embulk/embulk) and its plugins with Puppet on CentOS.
 
 ## Setup
 

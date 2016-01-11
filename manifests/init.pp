@@ -1,48 +1,43 @@
 # Class: embulk
 # ===========================
 #
-# Full description of class embulk here.
+# This class install and configure embulk.
 #
 # Parameters
 # ----------
 #
-# Document parameters here.
+# * `ensure`
+# Value to be passed to ensure in the package resource.
+# Defaults to "present".
 #
-# * `sample parameter`
-# Explanation of what this parameter affects and what it defaults to.
-# e.g. "Specify one or more upstream ntp servers as an array."
-#
-# Variables
-# ----------
-#
-# Here you should define a list of variables that this module would require.
-#
-# * `sample variable`
-#  Explanation of how this variable affects the function of this class and if
-#  it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#  External Node Classifier as a comma separated list of hostnames." (Note,
-#  global variables should be avoided in favor of class parameters as
-#  of Puppet 2.6.)
+# * `version`
+# Value to be passed to ensure in the package resource.
+# Defaults to "latest".
 #
 # Examples
 # --------
 #
-# @example
-#    class { 'embulk':
-#      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#    }
+#  class { 'embulk':
+#    ensure  => present,
+#    version => 'latest',
+#  }
 #
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
+# Okumura Takahiro <hfm.garden@gmail.com>
 #
 # Copyright
 # ---------
 #
-# Copyright 2016 Your name here, unless otherwise noted.
-#
-class embulk {
+# Copyright 2016 Okumura Takahiro.
 
+class embulk (
+  $ensure  = $::embulk::params::present,
+  $version = $::embulk::params::version,
+  $user    = $::embulk::params::user,
+) inherits ::embulk::params {
+
+  class { 'embulk::install': }
 
 }
