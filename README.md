@@ -1,4 +1,6 @@
-# embulk
+# puppet-embulk
+
+[![Build Status](https://travis-ci.org/hfm/puppet-embulk.svg?branch=master)](https://travis-ci.org/hfm/puppet-embulk)
 
 #### Table of Contents
 
