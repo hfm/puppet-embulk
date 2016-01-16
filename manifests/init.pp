@@ -38,7 +38,7 @@ class embulk (
   $user    = 'root',
 ) {
 
-  $url = $::version ? {
+  $url = $version ? {
     'latest' => 'http://dl.embulk.org/embulk-latest.jar',
     default  => "https://dl.bintray.com/embulk/maven/embulk-${version}.jar",
   }
