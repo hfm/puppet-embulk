@@ -8,8 +8,14 @@
   "project_page": "https://github.com/hfm/puppet-embulk",
   "issues_url": "https://github.com/hfm/puppet-embulk/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
-    {"name":"maestrodev-wget","version_requirement":">= 1.7.1"}
+    {
+      "name":"puppetlabs-stdlib",
+      "version_requirement":">= 1.0.0"
+    },
+    {
+      "name":"maestrodev-wget",
+      "version_requirement":">= 1.7.1"
+    }
   ],
   "data_provider": null
 }
