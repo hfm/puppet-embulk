@@ -12,8 +12,7 @@ end
 Vagrant.configure(2) do |config|
   config.vm.provision :puppet do |puppet|
     puppet.environment_path = '.'
-    puppet.environment      = 'test'
-    puppet.module_path      = 'modules'
+    puppet.environment      = 'example'
   end
 
   platforms.each do |dist, box|
