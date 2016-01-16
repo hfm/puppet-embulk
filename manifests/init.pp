@@ -45,16 +45,30 @@ class embulk (
     default  => "https://dl.bintray.com/embulk/maven/embulk-${version}.jar",
   }
 
-  $created_path = $::user ? {
-    'root'  => '/root/.embulk/bin/embulk',
-    default => "/home/${user}/.embulk/bin/embulk",
+  $created_path = $user ? {
+    'root'  => '/root/.embulk',
+    default => "/home/${user}/.embulk",
+  }
+
+  file {
+    [
+      $created_path,
+      "${created_path}/bin",
+    ]:
+      ensure => 'directory',
+      owner  => $user,
   }
 
   include ::wget
   ::wget::fetch { $url:
-    destination => $created_path,
+    destination => "${created_path}/bin/embulk",
     user        => $user,
     verbose     => false,
+  } ~>
+  file { "${created_path}/bin/embulk":
+    ensure => present,
+    owner  => $user,
+    mode   => "0755",
   }
 
 }
