@@ -13,3 +13,7 @@ task :validate do
     sh "erb -P -x -T '-' #{template} | ruby -c"
   end
 end
+
+unless Bundler.settings.without.include?(:development)
+  require 'puppet_blacksmith/rake_tasks'
+end
