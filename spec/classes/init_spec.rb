@@ -6,4 +6,8 @@ describe 'embulk' do
     it { should compile.with_all_deps }
     it { should contain_class('embulk') }
   end
+
+  context 'dependencies' do
+    it { should contain_package('java-1.7.0-openjdk') }
+  end
 end
