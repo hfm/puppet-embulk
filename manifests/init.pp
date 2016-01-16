@@ -38,6 +38,21 @@ class embulk (
   $user    = 'root',
 ) {
 
-  class { 'embulk::install': }
+  $url = $::version ? {
+    'latest' => 'http://dl.embulk.org/embulk-latest.jar',
+    default  => "https://dl.bintray.com/embulk/maven/embulk-${version}.jar",
+  }
+
+  $created_path = $::user ? {
+    'root'  => '/root/.embulk/bin/embulk',
+    default => "/home/${user}/.embulk/bin/embulk",
+  }
+
+  include ::wget
+  ::wget::fetch { $url:
+    destination => $created_path,
+    user        => $user,
+    verbose     => false,
+  }
 
 }
