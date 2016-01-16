@@ -53,8 +53,3 @@ Tested on:
 - CentOS 5.11
 - CentOS 6.6
 - CentOS 7.2.1511
-
-## Development
-
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
