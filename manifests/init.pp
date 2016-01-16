@@ -33,10 +33,10 @@
 # Copyright 2016 Okumura Takahiro.
 
 class embulk (
-  $ensure  = $::embulk::params::present,
-  $version = $::embulk::params::version,
-  $user    = $::embulk::params::user,
-) inherits ::embulk::params {
+  $ensure  = present,
+  $version = 'latest',
+  $user    = 'root',
+) {
 
   class { 'embulk::install': }
 
