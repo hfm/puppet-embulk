@@ -68,7 +68,7 @@ class embulk (
   file { "${created_path}/bin/embulk":
     ensure => present,
     owner  => $user,
-    mode   => "0755",
+    mode   => '0755',
   }
 
 }
