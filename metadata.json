@@ -1,6 +1,6 @@
 {
   "name": "hfm-embulk",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "hfm",
   "summary": "This puppet module install anda configure embulk and its plugins.",
   "license": "MIT",
@@ -29,6 +29,14 @@
     },
     {
       "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5.0",
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific Linux",
       "operatingsystemrelease": [
         "5.0",
         "6.0",
