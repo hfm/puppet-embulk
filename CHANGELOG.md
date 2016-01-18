@@ -1,6 +1,11 @@
 CHANGELOG
 ===
 
+v0.2.1
+---
+
+If you specify `ensure => present`, using the latest version of embulk.
+
 v0.2.0
 ---
 
