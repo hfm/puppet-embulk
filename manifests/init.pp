@@ -39,9 +39,10 @@ class embulk (
 
   ensure_packages('java-1.7.0-openjdk')
 
-  $url = $version ? {
-    latest => 'http://dl.embulk.org/embulk-latest.jar',
-    default  => "https://dl.bintray.com/embulk/maven/embulk-${version}.jar",
+  $url = $ensure ? {
+    latest  => 'http://dl.embulk.org/embulk-latest.jar',
+    present => 'http://dl.embulk.org/embulk-latest.jar',
+    default => "https://dl.bintray.com/embulk/maven/embulk-${ensure}.jar",
   }
 
   $embulk_dir = $user ? {
