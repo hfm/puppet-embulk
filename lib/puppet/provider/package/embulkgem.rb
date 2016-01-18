@@ -12,6 +12,9 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
   def self.gemlist(options)
     gem_list_command = [command(:gemcmd), "gem", "list"]
 
+    # It's a dirty... (for Ruby 1.8.7)
+    gem_list_command.unshift('sh') if RUBY_VERSION < '1.9.0'
+
     if options[:local]
       gem_list_command << "--local"
     else
