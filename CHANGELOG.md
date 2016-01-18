@@ -1,6 +1,11 @@
 CHANGELOG
 ===
 
+v0.2.0
+---
+
+Remove a variable of `$version` because it's overlapped with `$ensure`.
+
 v0.1.1 ~ v0.1.5
 ---
 
