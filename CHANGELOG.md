@@ -1,6 +1,11 @@
 CHANGELOG
 ===
 
+v1.0.0
+---
+
+Implement `embulk::plugin`.
+
 v0.2.1
 ---
 
