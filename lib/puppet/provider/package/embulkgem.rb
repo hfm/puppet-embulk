@@ -47,7 +47,7 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
     command << "-v" << resource[:ensure] if (! resource[:ensure].is_a? Symbol) and useversion
 
     # It's a dirty... (for Ruby 1.8.7)
-    gem_list_command.unshift('sh') if RUBY_VERSION < '1.9.0'
+    command.unshift('sh') if RUBY_VERSION < '1.9.0'
 
     if source = resource[:source]
       begin
@@ -90,7 +90,7 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
     command << "--executables" << "--all" << resource[:name]
 
     # It's a dirty... (for Ruby 1.8.7)
-    gem_list_command.unshift('sh') if RUBY_VERSION < '1.9.0'
+    command.unshift('sh') if RUBY_VERSION < '1.9.0'
 
     command += uninstall_options if resource[:uninstall_options]
 
