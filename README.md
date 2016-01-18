@@ -38,6 +38,8 @@ and execute ``` librarian-puppet install ```.
 Usage
 ---
 
+### Installation of embulk
+
 ```puppet
 include ::embulk
 
@@ -52,6 +54,28 @@ class { '::embulk':
 # Or you can specify the user of embulk.
 class { '::embulk':
   user => 'embulk_user',
+}
+```
+
+### Installation of embulk plugins
+
+Using `embulk gem` command to install embulk plugins like the following:
+
+```puppet
+include ::embulk
+
+::embulk::plugin {
+  # Enable to use an array
+  [
+    'embulk-parser-ltsv',
+    'embulk-filter-insert',
+  ]:
+    ensure => present;
+
+  # You can use latest to be up-to-date version.
+  # Default to present.
+  'embulk-output-bigquery':
+    ensure => latest;
 }
 ```
 
