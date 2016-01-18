@@ -1,6 +1,11 @@
 CHANGELOG
 ===
 
+v1.0.1
+---
+
+Fix for Ruby 1.8.7
+
 v1.0.0
 ---
 
