@@ -8,11 +8,11 @@
 #
 # * `ensure`
 # Value to be passed to ensure in the package resource.
-# Defaults to "present".
-#
-# * `version`
-# Value to be passed to ensure in the package resource.
 # Defaults to "latest".
+#
+# * `user`
+# The user who will own embulk.
+# Defaults to "root".
 #
 # Examples
 # --------
@@ -33,15 +33,14 @@
 # Copyright 2016 Okumura Takahiro.
 
 class embulk (
-  $ensure  = present,
-  $version = 'latest',
+  $ensure  = latest,
   $user    = 'root',
 ) {
 
   ensure_packages('java-1.7.0-openjdk')
 
   $url = $version ? {
-    'latest' => 'http://dl.embulk.org/embulk-latest.jar',
+    latest => 'http://dl.embulk.org/embulk-latest.jar',
     default  => "https://dl.bintray.com/embulk/maven/embulk-${version}.jar",
   }
 

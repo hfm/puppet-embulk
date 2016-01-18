@@ -41,8 +41,17 @@ Usage
 ```puppet
 include ::embulk
 
+# Default latest version
+class { '::embulk': }
+
+# Or you can specify the version of embulk.
 class { '::embulk':
-  version => '0.7.9',
+  ensure => '0.8.1',
+}
+
+# Or you can specify the user of embulk.
+class { '::embulk':
+  user => 'embulk_user',
 }
 ```
 
