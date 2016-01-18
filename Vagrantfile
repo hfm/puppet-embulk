@@ -13,6 +13,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :puppet do |puppet|
     puppet.environment_path = '.'
     puppet.environment      = 'example'
+    # puppet.options          = ['--verbose', '--debug']
   end
 
   platforms.each do |dist, box|
