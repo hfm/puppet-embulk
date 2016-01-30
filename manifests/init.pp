@@ -37,7 +37,7 @@ class embulk (
   $user    = 'root',
 ) {
 
-  ensure_packages('java-1.7.0-openjdk')
+  include embulk::java
 
   $url = $ensure ? {
     latest  => 'http://dl.embulk.org/embulk-latest.jar',

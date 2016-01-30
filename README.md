@@ -87,3 +87,5 @@ Tested on:
 - CentOS 5.11
 - CentOS 6.6
 - CentOS 7.2.1511
+- Ubuntu 14.04
+- Debian 8
