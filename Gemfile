@@ -6,7 +6,6 @@ gem 'puppetlabs_spec_helper', '>= 0.8.2'
 gem 'puppet-lint', '>= 1.0.0'
 gem 'facter', '>= 1.7.0'
 gem 'metadata-json-lint'
-gem 'puppet-blacksmith', :group => :development
 
 platforms :ruby_18 do
   gem 'i18n', '~> 0.6.11'
@@ -21,6 +20,12 @@ else
 end
 
 group :test, :development do
-  gem 'beaker'
+  if RUBY_VERSION < '1.9'
+    gem 'beaker'
+  else
+    gem 'beaker', '~> 2.0'
+  end
+
   gem 'beaker-rspec'
+  gem 'puppet-blacksmith'
 end
