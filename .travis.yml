@@ -23,6 +23,16 @@ matrix:
   - rvm: default
     sudo: required
     services: docker
+    env: BEAKER_set=ubuntu-trusty-x64
+    script: bundle exec rake beaker
+  - rvm: default
+    sudo: required
+    services: docker
+    env: BEAKER_set=debian-jessie-x64
+    script: bundle exec rake beaker
+  - rvm: default
+    sudo: required
+    services: docker
     env: BEAKER_set=centos-6-x64
     script: bundle exec rake beaker
 deploy:
