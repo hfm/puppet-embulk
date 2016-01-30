@@ -23,7 +23,7 @@ matrix:
   - rvm: default
     sudo: required
     services: docker
-    env: BEAKER_set=centos-7-x64
+    env: BEAKER_set=centos-6-x64
     script: bundle exec rake beaker
 deploy:
   provider: puppetforge
