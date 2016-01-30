@@ -8,18 +8,11 @@ group :test, :development do
   gem 'puppet-lint', '>= 1.0.0'
   gem 'facter', '>= 1.7.0'
   gem 'metadata-json-lint'
-
-  if RUBY_VERSION < '1.9'
-    gem 'i18n', '~> 0.6.11'
-    gem 'activesupport', '~> 3.2'
-    gem 'rspec', '~> 3.1.0'
-    gem 'beaker', '~> 2.0'
-    gem 'librarian-puppet', '~> 1.5'
-  else
-    gem 'librarian-puppet'
-    gem 'beaker'
-  end
-
-  gem 'beaker-rspec'
+  gem 'librarian-puppet'
   gem 'puppet-blacksmith'
+end
+
+group :system_tests do
+  gem 'beaker'
+  gem 'beaker-rspec'
 end
