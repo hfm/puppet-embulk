@@ -28,7 +28,4 @@ describe 'embulk' do
       it { should compile }
     end
   end
-  context 'dependencies' do
-    it { should contain_package('java-1.7.0-openjdk') }
-  end
 end
