@@ -6,5 +6,5 @@ HOSTS:
     docker_preserve_image: true
 CONFIG:
   type: foss
-  log_level: debug
+  # log_level: debug
   masterless: true
