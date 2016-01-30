@@ -19,3 +19,8 @@ if RUBY_VERSION < '1.9'
 else
   gem 'librarian-puppet'
 end
+
+group :test, :development do
+  gem 'beaker'
+  gem 'beaker-rspec'
+end
