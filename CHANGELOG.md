@@ -1,6 +1,16 @@
 CHANGELOG
 ===
 
+v1.2.0
+---
+
+Support Ubunt 12.04 and Debian 6 and 7.
+
+v1.1.0
+---
+
+Support Ubuntu 14.04 and Debian 8.
+
 v1.0.1 ~ v1.0.3
 ---
 
