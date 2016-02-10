@@ -7,6 +7,7 @@
   "source": "https://github.com/hfm/puppet-embulk",
   "project_page": "https://github.com/hfm/puppet-embulk",
   "issues_url": "https://github.com/hfm/puppet-embulk/issues",
+  "tags": ["embulk"],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
