@@ -15,6 +15,5 @@ Gemfile.lock
 .librarian
 Puppetfile.lock
 .tmp
-example/modules/
-!example/modules/embulk
+examples/modules/
 log/
