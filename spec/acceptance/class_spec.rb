@@ -21,6 +21,11 @@ describe 'embulk class' do
     expect(result.exit_code).not_to eq 6
   end
 
+  it "should run a second time without changes" do
+    result = apply_manifest(manifest)
+    expect(result.exit_code).to eq 0
+  end
+
   describe file('/root/.embulk/bin/embulk') do
     it { should be_mode 755 }
     it { should be_owned_by 'root' }
