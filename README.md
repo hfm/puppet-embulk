@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/hfm/puppet-embulk/master.svg?style=flat-square)](https://travis-ci.org/hfm/puppet-embulk)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/hfm/embulk.svg?style=flat-square)](https://forge.puppetlabs.com/hfm/embulk)
+[![Puppet Forge](https://img.shields.io/puppetforge/f/hfm/embulk.svg?style=flat-square)](https://forge.puppetlabs.com/hfm/embulk)
 
 #### Table of Contents
 
