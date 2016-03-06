@@ -1,13 +1,15 @@
 {
   "name": "hfm-embulk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "hfm",
   "summary": "This puppet module install anda configure embulk and its plugins.",
   "license": "MIT",
   "source": "https://github.com/hfm/puppet-embulk",
   "project_page": "https://github.com/hfm/puppet-embulk",
   "issues_url": "https://github.com/hfm/puppet-embulk/issues",
-  "tags": ["embulk"],
+  "tags": [
+    "embulk"
+  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
