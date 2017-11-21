@@ -40,8 +40,8 @@ class embulk (
   require ::java
 
   $url = $ensure ? {
-    latest  => 'http://dl.embulk.org/embulk-latest.jar',
-    present => 'http://dl.embulk.org/embulk-latest.jar',
+    latest  => 'https://dl.embulk.org/embulk-latest.jar',
+    present => 'https://dl.embulk.org/embulk-latest.jar',
     default => "https://dl.bintray.com/embulk/maven/embulk-${ensure}.jar",
   }
 
