@@ -35,6 +35,7 @@ and execute ``` librarian-puppet install ```.
 ### Used modules
 
 - [puppetlabs/puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib)
+- [puppetlabs/puppetlabs-java](https://github.com/puppetlabs/puppetlabs-java)
 
 Usage
 ---
