@@ -1,11 +1,12 @@
 CHANGELOG
 ===
 
-v2.0.0 (2017/11/21)
+v2.0.1 (2017/11/21)
 ---
 
 - Using puppetlabs-java [#5](https://github.com/hfm/puppet-embulk/pull/5)
 - Support Puppet 4.9 or later
+- Added supported os
 
 v1.2.0
 ---
