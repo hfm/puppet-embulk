@@ -33,8 +33,8 @@
 # Copyright 2016 Okumura Takahiro.
 
 class embulk (
-  $ensure = latest,
-  $user   = 'root',
+  String $ensure = latest,
+  String $user   = 'root',
 ) {
 
   require ::java
