@@ -1,6 +1,11 @@
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
-require 'puppet_blacksmith/rake_tasks'
+require 'metadata-json-lint/rake_task'
+begin
+  require 'puppet_blacksmith/rake_tasks'
+  require 'puppet-strings/tasks'
+rescue LoadError
+end
 
 desc "Validate manifests, templates, and ruby files"
 task :validate do
@@ -14,3 +19,13 @@ task :validate do
     sh "erb -P -x -T '-' #{template} | ruby -c"
   end
 end
+
+desc 'Run metadata_lint, lint, validate, and spec tests.'
+task :test do
+  [:metadata_lint, :lint, :validate, :spec].each do |test|
+    Rake::Task[test].invoke
+  end
+end
+
+task(:default).clear
+task default: :test

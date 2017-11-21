@@ -1,0 +1,10 @@
+HOSTS:
+  debian9:
+    platform: debian-stretch-x86_64
+    image: debian:stretch
+    hypervisor: docker
+    docker_image_commands:
+      - 'apt-get install -y wget'
+CONFIG:
+  type: foss
+  masterless: true

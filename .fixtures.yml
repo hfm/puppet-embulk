@@ -1,6 +1,7 @@
 fixtures:
   forge_modules:
     stdlib: "puppetlabs/stdlib"
+    java: "puppetlabs/java"
     wget: "maestrodev/wget"
   symlinks:
     "embulk": "#{source_dir}"

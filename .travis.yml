@@ -1,31 +1,20 @@
 language: ruby
-rvm:
-- 2.0.0
-- 2.3.0
 cache: bundler
-before_script: bundle exec puppet --version
-script:
-- bundle exec rake lint
-- bundle exec rake validate
-- bundle exec rake spec
-env:
-- PUPPET_VERSION='~> 3.8.0'
-- PUPPET_VERSION='~> 4.3.0'
 matrix:
-  exclude:
-  - rvm: 2.3.0
-    env: PUPPET_VERSION='~> 3.8.0'
   include:
+  - rvm: 2.1.10
+    env: PUPPET_VERSION='~> 4.9.0'
+    script: bundle exec rake lint validate spec
+  - rvm: 2.4.2
+    env: PUPPET_VERSION='~> 5.0.0'
+    script: bundle exec rake lint validate spec
   - rvm: default
     sudo: required
     services: docker
-    env: BEAKER_set=centos7
+    env: BEAKER_set=centos7 BEAKER_debug=true
     script: bundle exec rake beaker
   - rvm: default
     sudo: required
     services: docker
-    env: BEAKER_set=trusty
+    env: BEAKER_set=debian9 BEAKER_debug=true
     script: bundle exec rake beaker
-notifications:
-  slack:
-    secure: YQsy4yIZ60TX5gms6FyiNPpx8On4lpR4dDEbbWl9pxM0Pxyl3I+AQDO6uLIni8CZZDAWXLbACPzJVb1vlG1mnluBeleUfU3oUwXYvvkBpVu3Jeq7KutunFrSt/JMsb5diesS9RtYlDpCHIz0FXYByVFO4k/crIiiDtrMVG9LWnhNCmJlzAs2kA7Q7EHLT9XoS8FmIehB5DN5R+h46RoHqzLG6nzA8CrDfRsgSg/6671RSMaj6SqYZ3qZXVwAveLxaU0Ups8i3kCD6pZqY3ZnhTYeusQjizHdR0QvKluhuU2shpylBOsYgdW2qiSoD34JdTYpF8pguhUKgn1NlIAVs4ng1ZLU+qbjYEXgHZhPe3Ado7WFPmCMMhGkpmQrzdDb3RQuXYfwX+Yo65a4imW1Tb0Zh3YrMvwYPnQca93Ykym9y4i4VEy+ClFIeFQVcr4APcGIa/uX4KFdvbmKEEdbEj22v+ZPZSPXMz3S598niu2Q0ILT4/zehDkhnvYfJkZD/T0w6e8JNJYUf0+23G6eiDeZFdlztq+DAk76roSrY/luRR0A84QyG6Fe4mSSQm1A0XYMMEU0jbv1+m8tYIn7st9oStPgINQr6vd2X/w3YC8nzZD37ZT3LJ40y8SNXpBz6AcpTsg/qXRZelsztOI5RL0yt5iMumEZKGTknw/2uSQ=
