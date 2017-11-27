@@ -10,6 +10,12 @@
   "tags": [
     "embulk"
   ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=4.9.0 < 6.0.0"
+    }
+  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",

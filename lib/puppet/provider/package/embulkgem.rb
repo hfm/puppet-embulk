@@ -12,9 +12,6 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
   def self.gemlist(options)
     gem_list_command = [command(:gemcmd), "gem", "list"]
 
-    # It's a dirty... (for Ruby 1.8.7)
-    gem_list_command.unshift('sh') if RUBY_VERSION < '1.9.0'
-
     if options[:local]
       gem_list_command << "--local"
     else
@@ -45,9 +42,6 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
   def install(useversion = true)
     command = [command(:gemcmd), "gem", "install"]
     command << "-v" << resource[:ensure] if (! resource[:ensure].is_a? Symbol) and useversion
-
-    # It's a dirty... (for Ruby 1.8.7)
-    command.unshift('sh') if RUBY_VERSION < '1.9.0'
 
     if source = resource[:source]
       begin
@@ -88,9 +82,6 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
   def uninstall
     command = [command(:gemcmd), "gem", "uninstall"]
     command << "--executables" << "--all" << resource[:name]
-
-    # It's a dirty... (for Ruby 1.8.7)
-    command.unshift('sh') if RUBY_VERSION < '1.9.0'
 
     command += uninstall_options if resource[:uninstall_options]
 
