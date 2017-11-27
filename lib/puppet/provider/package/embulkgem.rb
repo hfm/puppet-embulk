@@ -5,9 +5,7 @@ Puppet::Type.type(:package).provide(:embulkgem, :parent => :gem) do
 
   has_feature :versionable, :install_options, :uninstall_options
 
-  ENV['PATH'] = "#{ENV['HOME']}/.embulk/bin:#{ENV['PATH']}"
-
-  commands :gemcmd => 'embulk'
+  commands :gemcmd => "#{ENV['HOME']}/.embulk/bin/embulk"
 
   def self.gemlist(options)
     gem_list_command = [command(:gemcmd), "gem", "list"]
