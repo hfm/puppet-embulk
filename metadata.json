@@ -7,9 +7,6 @@
   "source": "https://github.com/hfm/puppet-embulk",
   "project_page": "https://github.com/hfm/puppet-embulk",
   "issues_url": "https://github.com/hfm/puppet-embulk/issues",
-  "tags": [
-    "embulk"
-  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
@@ -20,7 +17,6 @@
       "version_requirement": ">= 1.7.1 < 2.0.0"
     }
   ],
-  "data_provider": null,
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -61,5 +57,17 @@
         "8"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "tags": [
+    "embulk"
+  ],
+  "pdk-version": "1.6.0",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.6.0-0-gf5564c0"
 }
