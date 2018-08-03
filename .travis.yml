@@ -30,7 +30,7 @@ matrix:
       rvm: 2.1.9
       bundler_args: --without acceptance
     -
-      env: CHECK=beaker BEAKER_set=trusty BEAKER_debug=true
+      env: CHECK=beaker BEAKER_set=debian9 BEAKER_debug=true
       sudo: required
       services: docker
     -
