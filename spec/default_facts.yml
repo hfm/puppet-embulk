@@ -6,3 +6,9 @@ concat_basedir: "/tmp"
 ipaddress: "172.16.254.254"
 is_pe: false
 macaddress: "AA:AA:AA:AA:AA:AA"
+osfamily: 'RedHat'
+kernel: 'Linux'
+architecture: 'x86_64'
+lsbdistcodename: 'jessie'
+operatingsystem: 'CentOS'
+operatingsystemrelease: '7.1.1503'
