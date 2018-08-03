@@ -1,6 +1,19 @@
 CHANGELOG
 ===
 
+## [v2.1.0](https://github.com/hfm/puppet-embulk/compare/v2.0.0...v2.1.0) (2017-11-27)
+
+* Specify absolute path [#8](https://github.com/hfm/puppet-embulk/pull/8) ([hfm](https://github.com/hfm))
+* Support Puppet 4.9.0 or later [#7](https://github.com/hfm/puppet-embulk/pull/7) ([hfm](https://github.com/hfm))
+* data_provider is deprecated [#6](https://github.com/hfm/puppet-embulk/pull/6) ([hfm](https://github.com/hfm))
+
+v2.0.1 (2017/11/21)
+---
+
+- Using puppetlabs-java [#5](https://github.com/hfm/puppet-embulk/pull/5)
+- Support Puppet 4.9 or later
+- Added supported os
+
 v1.2.0
 ---
 

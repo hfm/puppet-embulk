@@ -33,15 +33,15 @@
 # Copyright 2016 Okumura Takahiro.
 
 class embulk (
-  $ensure  = latest,
-  $user    = 'root',
+  String $ensure = latest,
+  String $user   = 'root',
 ) {
 
-  include embulk::java
+  require ::java
 
   $url = $ensure ? {
-    latest  => 'http://dl.embulk.org/embulk-latest.jar',
-    present => 'http://dl.embulk.org/embulk-latest.jar',
+    latest  => 'https://dl.embulk.org/embulk-latest.jar',
+    present => 'https://dl.embulk.org/embulk-latest.jar',
     default => "https://dl.bintray.com/embulk/maven/embulk-${ensure}.jar",
   }
 
@@ -64,8 +64,8 @@ class embulk (
     destination => "${embulk_dir}/bin/embulk",
     user        => $user,
     verbose     => false,
-  } ~>
-  file { "${embulk_dir}/bin/embulk":
+  }
+  ~> file { "${embulk_dir}/bin/embulk":
     ensure => present,
     owner  => $user,
     mode   => '0755',

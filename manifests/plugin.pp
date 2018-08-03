@@ -28,7 +28,7 @@
 # Copyright 2016 Okumura Takahiro.
 
 define embulk::plugin (
-  $ensure = present,
+  String $ensure = present,
 ) {
 
   require ::embulk
