@@ -18,7 +18,8 @@ Puppet::Type.type(:package).provide(:embulkgem, parent: :gem) do
     if options[:source]
       gem_list_command << '--source' << options[:source]
     end
-    if name = options[:justme]
+    name = options[:justme]
+    if name
       gem_list_command << '^' + name + '$'
     end
 
@@ -30,18 +31,16 @@ Puppet::Type.type(:package).provide(:embulkgem, parent: :gem) do
       raise Puppet::Error, "Could not list gems: #{detail}", detail.backtrace
     end
 
-    if options[:justme]
-      return list.shift
-    else
-      return list
-    end
+    return list.shift if options[:justme]
+    list
   end
 
   def install(useversion = true)
     command = [command(:gemcmd), 'gem', 'install']
     command << '-v' << resource[:ensure] if (!resource[:ensure].is_a? Symbol) && useversion
 
-    if source = resource[:source]
+    source = resource[:source]
+    if source
       begin
         uri = URI.parse(source)
       rescue => detail
