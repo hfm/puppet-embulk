@@ -2,18 +2,18 @@ require 'spec_helper'
 
 describe 'embulk' do
   context 'redhat' do
-    it { should compile }
-    it { should compile.with_all_deps }
-    it { should contain_class('embulk') }
+    it { is_expected.to compile }
+    it { is_expected.to compile.with_all_deps }
+    it { is_expected.to contain_class('embulk') }
   end
 
   context 'debian' do
     let(:facts) do
-      { :osfamily => 'Debian' }
+      { osfamily: 'Debian' }
     end
 
-    it { should compile }
-    it { should compile.with_all_deps }
-    it { should contain_class('embulk') }
+    it { is_expected.to compile }
+    it { is_expected.to compile.with_all_deps }
+    it { is_expected.to contain_class('embulk') }
   end
 end
