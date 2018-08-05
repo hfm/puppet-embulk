@@ -21,10 +21,8 @@ matrix:
   include:
     -
       env: CHECK="syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop"
-      bundler_args: --without acceptance
     -
       env: CHECK=parallel_spec
-      bundler_args: --without acceptance
     -
       env: PUPPET_GEM_VERSION="~> 4.0" CHECK=parallel_spec
       rvm: 2.1.9
