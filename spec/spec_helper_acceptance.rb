@@ -16,7 +16,7 @@ RSpec.configure do |c|
       apply_manifest_on(host, 'package { "tar": }')
       on(host, puppet('module', 'install', 'puppetlabs-stdlib'))
       on(host, puppet('module', 'install', 'puppetlabs-java'))
-      on(host, puppet('module', 'install', 'maestrodev-wget'))
+      on(host, puppet('module', 'install', 'puppet-wget'))
     end
   end
 end
