@@ -1,6 +1,10 @@
 CHANGELOG
 ===
 
+## [v3.1.0](https://github.com/hfm/puppet-embulk/compare/v3.0.0...v3.1.0) (2018-10-03)
+
+* Use newer libraries [#10](https://github.com/hfm/puppet-embulk/pull/10) ([hfm](https://github.com/hfm))
+
 ## [v3.0.0](https://github.com/hfm/puppet-embulk/compare/v2.1.0...v3.0.0) (2018-08-04)
 
 * pdk convert [#9](https://github.com/hfm/puppet-embulk/pull/9) ([hfm](https://github.com/hfm))
